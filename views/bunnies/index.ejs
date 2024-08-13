@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css"> 
+  <title>Bunny List</title>
+</head>
+<body>
+  <h1>Bunnies</h1>
+  <a href="/bunnies/new">Add New Bunny</a>
+  <ul>
+    <% bunnies.forEach(bunny => { %>
+      <li>
+        <h2><%= bunny.name %></h2>
+        <p>Breed: <%= bunny.breed %></p>
+        <% if (bunny.image) { %>
+          <img src="<%= bunny.image %>" alt="<%= bunny.name %>" width="100">
+        <% } %>
+        <a href="/bunnies/<%= bunny._id %>/edit">Edit</a>
+        <form action="/bunnies/<%= bunny._id %>/delete" method="POST" style="display:inline;">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>

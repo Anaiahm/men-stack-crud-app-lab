@@ -1,0 +1,126 @@
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f8f4; 
+    color: #333;
+}
+
+header {
+    background-color: #ffebf2; 
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ffccd5; 
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #ff6f61;
+}
+
+a {
+    text-decoration: none;
+    color: #4caf50; 
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    border: 1px solid #e1e5ea;
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+li::before {
+    content: url('/images/bunny-icon.png'); 
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: auto;
+}
+
+h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.8rem;
+    color: #ff6f61; 
+}
+
+p {
+    margin: 5px 0;
+}
+
+
+
+button {
+    background-color: #ff6f61; 
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #ff3b2d; 
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    color: #4caf50; 
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus {
+    border-color: #4caf50; 
+    outline: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100%;            
+    width: 100%;             
+}
+
+
+.centered-image {
+    max-width: 100%;  
+    height: auto;     
+    border: 2px solid #ff69b4; 
+    border-radius: 10px; 
+}

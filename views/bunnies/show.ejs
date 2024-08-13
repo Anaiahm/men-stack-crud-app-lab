@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css"> 
+  <title><%= bunny.name %></title>
+</head>
+<body>
+  <h1><%= bunny.name %></h1>
+  <p>Breed: <%= bunny.breed %></p>
+  <% if (bunny.image) { %>
+    <img src="<%= bunny.image %>" alt="<%= bunny.name %>">
+  <% } %>
+  <a href="/bunnies/<%= bunny._id %>/edit">Edit</a>
+  <form action="/bunnies/<%= bunny._id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete</button>
+  </form>
+  <a href="/bunnies">Back to All Bunnies</a>
+</body>
+</html>
